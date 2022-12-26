@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Mis eventos</string>
+    <string name="title_activity_main_registrar">MainActivityRegistrar</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="usuario">Usuario</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="palabra">Palabra</string>
+    <string name="clave">Clave</string>
+    <string name="olvido">Olvido de clave</string>
+    <string name="registro">Registro</string>
+    <string name="ingreso">Ingreso</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="mostrar">Mostrar</string>
+    <string name="salir">Salir</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="titulo">Titulo</string>
+    <string name="fecha">Fecha</string>
+    <string name="importancia">Importancia</string>
+    <string name="Lugar">Lugar</string>
+    <string name="tiempo">Tiempo</string>
+    <string name="observacion">Observacion</string>
+    <string name="agregar">Agregar</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_registro">Registro</string>
+</resources>
+
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My events</string>
+    <string name="next">Next</string>
+    <string name="previous">Previus</string>
+    <string name="usuario">User</string>
+    <string name="clave">clue</string>
+    <string name="registro">Registration</string>
+    <string name="ingreso">Entry</string>
+    <string name="editar">Edit</string>
+    <string name="eliminar">Eliminate</string>
+    <string name="mostrar">To Show</string>
+    <string name="salir">Go Out</string>
+    <string name="nombre">Name</string>
+    <string name="apellido">Surname</string>
+    <string name="palabra">Word</string>
+    <string name="actualizar">To Update</string>
+    <string name="cancelar">Cancel</string>
+    <string name="titulo">Title</string>
+    <string name="fecha">Date</string>
+    <string name="importancia">Importance</string>
+    <string name="Lugar">Place</string>
+    <string name="tiempo">Weather</string>
+    <string name="observacion">Observation</string>
+    <string name="agregar">Add</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="title_activity_main_registrar">MainActivityRegistrar</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_registro">"Registration "</string>
+    <string name="olvido">forgot password</string>
+</resources>
