@@ -108,14 +108,10 @@ public class daoUsuario {
 
 
 
-    public Boolean updateUsuario(Usuario u){
-        ContentValues cv = new ContentValues();
-        cv.put("ID",u.getId());
+    public boolean updatePassword(Usuario u){
+        ContentValues cv=new ContentValues();
         cv.put("clave", u.getClave());
-        cv.put("nombre", u.getNombre());
-        cv.put("apellido", u.getApellido());
-        cv.put("palabra", u.getPalabra());
-        return (sql.update("Usuario",cv,"id"+u.getId()+"clave"+u.getClave(), null) > 0);
+        return (sql.update("usuario", cv, "id="+u.getId(), null)>0);
     }
 
     public boolean deleteUsuario(int id){
@@ -127,5 +123,28 @@ public class daoUsuario {
         }
 
         return false;
+    }
+
+    public int getClave(String us, String cla){
+        int a=0;
+        Cursor cr=sql.rawQuery("select * from usuario", null);
+        if(cr!=null&&cr.moveToFirst()){
+            do{
+                if(cr.getString(1).equals(us)&&cr.getString(5).equals(cla)){
+                    a++;
+                }
+            }while(cr.moveToNext());
+        }
+        return a;
+    }
+
+    public Usuario getUsuarioClave(String u){
+        lista=selectUsuarios();
+        for(Usuario us:lista){
+            if(us.getUsuario().equals(u)){
+                return us;
+            }
+        }
+        return null;
     }
 }

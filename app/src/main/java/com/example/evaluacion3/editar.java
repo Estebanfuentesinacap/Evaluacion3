@@ -12,31 +12,30 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class editar extends AppCompatActivity implements View.OnClickListener {
     Button Act, Canc;
-    TextInputLayout  Cla,User;
+    TextInputLayout  Cla,Cla2;
     int id=0;
     Usuario u;
-    daoUsuario dao;
     Intent x;
+    daoUsuario dao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar);
         Cla=findViewById(R.id.tilCla);
-        User=findViewById(R.id.tilUser);
+        Cla2=findViewById(R.id.tilCla2);
 
         Act=findViewById(R.id.btnActualizar);
         Canc=findViewById(R.id.btnCancelar);
+
         Bundle b = getIntent().getExtras();
-        dao= new daoUsuario(this);
         id=b.getInt("id");
+        dao=new daoUsuario(this);
         u=dao.getUsuarioById(id);
 
         Act.setOnClickListener(this);
         Canc.setOnClickListener(this);
 
-        User.getEditText().setText(u.getUsuario());
-        Cla.getEditText().setText(u.getClave());
 
     }
 
@@ -44,22 +43,22 @@ public class editar extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnActualizar:
-                u.setUsuario(User.getEditText().getText().toString());
-                u.setClave(Cla.getEditText().getText().toString());
-                if (!u.isNull()){
-                    Toast.makeText(this,"Error: campos vacios",Toast.LENGTH_LONG).show();
-                }else if (dao.updateUsuario(u)){
-                    Toast.makeText(this,"Registro exitoso",Toast.LENGTH_LONG).show();
-                    Intent i3=new Intent(this,inicio.class);
-                    i3.putExtra("id",u.getId());
-                    startActivity(i3);
-                    finish();
-                }else {
-                    Toast.makeText(this,"Usuario ya registrado",Toast.LENGTH_LONG).show();
+                u.setClave(Cla2.getEditText().getText().toString());
+                String clave1=Cla.getEditText().getText().toString();
+                String clave2=Cla2.getEditText().getText().toString();
+                if(clave1.equals("")&&clave2.equals("")){
+                    Toast.makeText(this, "ERROR: campos vacios", Toast.LENGTH_LONG).show();
+                }else if(!clave1.equals(clave2)){
+                    Toast.makeText(this, "Campos no son iguales", Toast.LENGTH_LONG).show();
+                }else if(dao.updatePassword(u)){
+                    Toast.makeText(this, "Contraseña actualizada correctamente", Toast.LENGTH_LONG).show();
+                    Intent i= new Intent(this, MainActivity.class);
+                    startActivity(i);
                 }
+                finish();
+                break;
             case R.id.btnCancelar:
                 Intent i4= new Intent(this,inicio.class);
-                i4.putExtra("id",u.getId());
                 startActivity(i4);
                 finish();
             }

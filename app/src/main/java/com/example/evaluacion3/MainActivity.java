@@ -15,7 +15,7 @@ import com.google.android.material.textfield.TextInputLayout;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextInputLayout usuario,clave;
-    Button ingresar, registrar;
+    Button ingresar, registrar, olvido;
     daoUsuario dao;
 
 
@@ -25,11 +25,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         usuario=findViewById(R.id.tilUsuario);
         clave=findViewById(R.id.tilClave);
+
         ingresar=findViewById(R.id.btnIngresar);
         registrar=findViewById(R.id.btnRegistrar);
+        olvido=findViewById(R.id.btnOlvido);
 
         ingresar.setOnClickListener(this);
         registrar.setOnClickListener(this);
+        olvido.setOnClickListener(this);
+
         dao= new daoUsuario(this);
 
         cargarPreferencias();
@@ -61,6 +65,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnRegistrar:
                 Intent i=new Intent(this,Registro.class);
                 startActivity(i);
+                break;
+
+            case R.id.btnOlvido:
+                Intent i3=new Intent(this,recuperarClave.class);
+                startActivity(i3);
                 break;
         }
 

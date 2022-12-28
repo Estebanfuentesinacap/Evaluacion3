@@ -10,11 +10,12 @@
         android:id="@+id/tilCla"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/tilUser"
+        android:layout_marginTop="8dp"
+        android:labelFor="@+id/tvClave"
+        app:layout_constraintEnd_toEndOf="@+id/tilCla2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tilUser"
-        app:layout_constraintTop_toBottomOf="@+id/tvClave"
-        android:labelFor="@+id/tvClave">
+        app:layout_constraintStart_toStartOf="@+id/tilCla2"
+        app:layout_constraintTop_toBottomOf="@+id/tvClave">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -38,16 +39,17 @@
         app:layout_constraintTop_toBottomOf="@+id/tilCla" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilUser"
+        android:id="@+id/tilCla2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:labelFor="@+id/tvCla2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUsuario"
-        android:labelFor="@+id/tvUsuario">
+        app:layout_constraintTop_toBottomOf="@+id/tvCla2">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -55,10 +57,10 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/tvUsuario"
+        android:id="@+id/tvCla2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/usuario"
+        android:hint="@string/clave1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -67,8 +69,11 @@
         android:id="@+id/tvClave"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/clave"
-        app:layout_constraintEnd_toEndOf="@+id/tilUser"
-        app:layout_constraintStart_toStartOf="@+id/tilUser"
-        app:layout_constraintTop_toBottomOf="@+id/tilUser" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/clave2"
+        app:layout_constraintEnd_toEndOf="@+id/tilCla2"
+        app:layout_constraintStart_toStartOf="@+id/tilCla2"
+        app:layout_constraintTop_toBottomOf="@+id/tilCla2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

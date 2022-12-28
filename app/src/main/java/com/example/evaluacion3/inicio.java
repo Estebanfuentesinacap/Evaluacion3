@@ -53,7 +53,8 @@ public class inicio extends AppCompatActivity implements View.OnClickListener {
         daoEvent = new daoEvento(this);
         id=b.getInt("id");
         u=dao.getUsuarioById(id);
-        nombre.setText(u.getNombre()+" "+u.getApellido());
+        nombre.setText("Bienvenido: "+u.getNombre());
+        limpiarPantalla();
 
     }
 
@@ -62,6 +63,7 @@ public class inicio extends AppCompatActivity implements View.OnClickListener {
         switch (v.getId()){
             case R.id.btnMostrar:
                 Intent i=new Intent(this,mostrar.class);
+                i.putExtra("id", u.getId());
                 startActivity(i);
                 break;
             case R.id.btnSalirLog:
@@ -89,6 +91,7 @@ public class inicio extends AppCompatActivity implements View.OnClickListener {
                     Toast.makeText(this, "ERROR: campos vacios", Toast.LENGTH_LONG).show();
                 }else if(daoEvent.insertEvento(e)){
                     Toast.makeText(this, "Registro creado exitosamente", Toast.LENGTH_LONG).show();
+                    limpiarPantalla();
 
 
                 }
@@ -123,4 +126,14 @@ public class inicio extends AppCompatActivity implements View.OnClickListener {
         }
 
     }
+
+    private void limpiarPantalla(){
+        titulo.getEditText().setText("");
+        fecha.getEditText().setText("");
+        importancia.getEditText().setText("");
+        observacion.getEditText().setText("");
+        tiempo.getEditText().setText("");
+        lugar.getEditText().setText("");
+    }
+
 }

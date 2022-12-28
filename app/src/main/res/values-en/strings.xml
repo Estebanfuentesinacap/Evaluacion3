@@ -18,9 +18,13 @@
     <string name="cancelar">Cancel</string>
     <string name="titulo">Title</string>
     <string name="fecha">Date</string>
+    <string name="clave1">Key one</string>
+    <string name="clave2">Key two</string>
     <string name="importancia">Importance</string>
     <string name="Lugar">Place</string>
     <string name="tiempo">Weather</string>
+    <string name="recuperar">Recover</string>
+    <string name="cambiar_clave">Change Password</string>
     <string name="observacion">Observation</string>
     <string name="agregar">Add</string>
     <string name="second_fragment_label">Second Fragment</string>

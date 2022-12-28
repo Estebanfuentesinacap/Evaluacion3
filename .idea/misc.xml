@@ -3,12 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/el_es/AndroidStudioProjects/Evaluacion3/app/src/main/res/layout/activity_editar.xml" value="0.14035087719298245" />
-        <entry key="..\:/Users/el_es/AndroidStudioProjects/Evaluacion3/app/src/main/res/layout/activity_inicio.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/el_es/AndroidStudioProjects/Evaluacion3/app/src/main/res/layout/activity_editar.xml" value="0.25" />
+        <entry key="..\:/Users/el_es/AndroidStudioProjects/Evaluacion3/app/src/main/res/layout/activity_inicio.xml" value="0.25" />
         <entry key="..\:/Users/el_es/AndroidStudioProjects/Evaluacion3/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/el_es/AndroidStudioProjects/Evaluacion3/app/src/main/res/layout/activity_main2.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/el_es/AndroidStudioProjects/Evaluacion3/app/src/main/res/layout/activity_main_registrar.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/el_es/AndroidStudioProjects/Evaluacion3/app/src/main/res/layout/activity_mostrar.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/el_es/AndroidStudioProjects/Evaluacion3/app/src/main/res/layout/activity_mostrar.xml" value="0.25" />
+        <entry key="..\:/Users/el_es/AndroidStudioProjects/Evaluacion3/app/src/main/res/layout/activity_recuperar_clave.xml" value="0.1689497716894977" />
         <entry key="..\:/Users/el_es/AndroidStudioProjects/Evaluacion3/app/src/main/res/layout/activity_registro.xml" value="0.33" />
         <entry key="..\:/Users/el_es/AndroidStudioProjects/Evaluacion3/app/src/main/res/layout/content_main_activity_registrar.xml" value="0.1" />
         <entry key="..\:/Users/el_es/AndroidStudioProjects/Evaluacion3/app/src/main/res/layout/fragment_first.xml" value="0.20416666666666666" />
